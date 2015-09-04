@@ -1,6 +1,6 @@
 {
   "name": "generator-ractive-django",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Yeoman generator for application with Django on backend and Ractive on frontend",
   "repository": {
     "type": "git",
