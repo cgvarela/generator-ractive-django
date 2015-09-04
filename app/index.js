@@ -12,8 +12,12 @@ module.exports = generators.Base.extend({
         );
     },
 
+    _exists: function(file) {
+        return this.fs.exists(this.templatePath(file));
+    },
+
     prepareBasicFiles: function() {
-        this._copy('.gitignore', '.gitignore');
+        this._copy(this._exists('.gitignore') ? '.gitignore' : '.npmignore', '.gitignore');
         this._copy('.bowerrc', '.bowerrc');
         this._copy('bower.json', 'bower.json');
         this._copy('package.json', 'package.json');
